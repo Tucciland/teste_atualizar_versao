@@ -103,10 +103,10 @@ def atualiza_versao(ver_atual):
         print(f'Nova versão baixada e salva em: {destino}')
         
         # Move o novo arquivo para a pasta de inicialização
-        shutil.move(destino, novo_arquivo)
-        print(f'Nova versão movida para: {novo_arquivo}')
+        shutil.copy2(destino, novo_arquivo)
+        print(f'Nova versão copiada para: {novo_arquivo}')
     else:
         print('Você já está usando a versão mais recente.')
 
-versao_atual = 1536
+versao_atual = 1537
 atualiza_versao(versao_atual)
